@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./register.css">
+  <link rel="stylesheet" href="../../../style.css">
+  <title>Document</title>
+</head>
+<body>
+    <header id="main-header">
+  <h1><a href="/" class="logo-link">Food Store</a></h1>
+
+  <nav id="main-nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+
+      <li id="user-menu-container">
+        <a href="/src/pages/auth/login/login.html" id="user-link">
+          <i class="fa-solid fa-user"></i>
+        </a>
+
+        <div id="user-dropdown" class="user-dropdown hidden">
+          <a href="#" id="profile-link" class="dropdown-item">Profile</a>
+          <button id="logout-button" class="dropdown-item">Logout</button>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <form id="register-form" class="register-form">
+    <h1>Create Account</h1>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="email@example.com" required />
+
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Min 8 characters" required />
+
+    <!-- TEMPORAL (puede eliminarse después) -->
+    <label for="select-role">Select role</label>
+    <select id="select-role" required>
+      <option value="">--Select--</option>
+      <option value="client">Client</option>
+      <option value="admin">Admin</option>
+    </select>
+
+    <button type="submit">Sign Up</button>
+
+    <p>
+      Already have an account?
+      <a href="/src/pages/auth/login/login.html">Login</a>
+    </p>
+  </form>
+</div>
+
+<script type="module" src="./register.ts"></script>
+</body>
+</html>

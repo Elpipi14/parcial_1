@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - Food Store</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="./admin.css" />
+  </head>
+  <body class="admin-page">
+    <header id="main-header">
+      <h1><a href="/" class="logo-link">Food Store</a></h1>
+
+      <nav id="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <button id="profile-logout-btn" class="logout-btn">Logout</button>
+
+          <li id="user-menu-container">
+            <a href="/src/pages/auth/login/login.html" id="user-link">
+              <i class="fa-solid fa-user"></i>
+            </a>
+
+            <div id="user-dropdown" class="user-dropdown hidden">
+              <a href="#" id="profile-link" class="dropdown-item">Profile</a>
+              <button id="logout-button" class="dropdown-item">Logout</button>
+            </div>
+          </li>
+
+          <li>
+            <a href="/src/pages/cart/cart.html" id="cart-link">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Admin Panel</h1>
+        <h2>Current Inventory</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Description</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>
+                <img
+                  src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=200"
+                  alt="Classic Burger"
+                  width="80"
+                />
+              </td>
+              <td>Classic Burger</td>
+              <td>Burgers</td>
+              <td>$3500</td>
+              <td>20</td>
+              <td>Beef burger with lettuce, tomato and cheddar cheese.</td>
+              <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>
+                <img
+                  src="https://images.unsplash.com/photo-1601924582970-9238bcb495d9?w=200"
+                  alt="Mozzarella Pizza"
+                  width="80"
+                />
+              </td>
+              <td>Mozzarella Pizza</td>
+              <td>Pizzas</td>
+              <td>$5000</td>
+              <td>15</td>
+              <td>Pizza with tomato sauce and mozzarella cheese.</td>
+              <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
+            </tr>
+
+            <tr>
+              <td>3</td>
+              <td>
+                <img
+                  src="https://images.unsplash.com/photo-1576107232684-1279f390859f?w=200"
+                  alt="French Fries"
+                  width="80"
+                />
+              </td>
+              <td>French Fries</td>
+              <td>Fries</td>
+              <td>$2000</td>
+              <td>30</td>
+              <td>Crispy salted fries, perfect as a side.</td>
+              <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
+            </tr>
+
+            <tr>
+              <td>4</td>
+              <td>
+                <img
+                  src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=200"
+                  alt="Coca Cola 500ml"
+                  width="80"
+                />
+              </td>
+              <td>Coca Cola 500ml</td>
+              <td>Drinks</td>
+              <td>$1500</td>
+              <td>25</td>
+              <td>Cold 500ml Coca Cola.</td>
+              <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
+            </tr>
+
+            <tr>
+              <td>5</td>
+              <td>
+                <img
+                  src="https://images.unsplash.com/photo-1550317138-10000687a72b?w=200"
+                  alt="Chicken Sandwich"
+                  width="80"
+                />
+              </td>
+              <td>Chicken Sandwich</td>
+              <td>Sandwiches</td>
+              <td>$3200</td>
+              <td>10</td>
+              <td>Grilled chicken sandwich with lettuce and mayo.</td>
+              <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
+            </tr>
+
+            <tr>
+              <td>6</td>
+              <td>
+                <img
+                  src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=200"
+                  alt="Ice Cream"
+                  width="80"
+                />
+              </td>
+              <td>Ice Cream</td>
+              <td>Desserts</td>
+              <td>$1800</td>
+              <td>12</td>
+              <td>Creamy ice cream in various flavors.</td>
+              <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="admin-form-section">
+        <fieldset>
+          <legend>Quick Add Product</legend>
+
+          <form action="#" method="post">
+            <p>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+            </p>
+
+            <p>
+              <label for="price">Price:</label>
+              <input type="number" id="price" name="price" required />
+            </p>
+
+            <p>
+              <label for="stock">Stock:</label>
+              <input type="number" id="stock" name="stock" required />
+            </p>
+
+            <p>
+              <label for="description">Description:</label>
+              <textarea
+                name="description"
+                id="description"
+                placeholder="Enter product description..."
+              ></textarea>
+            </p>
+
+            <p>
+              <label for="category">Category:</label>
+              <select id="category" name="category">
+                <option value="burgers">Burgers</option>
+                <option value="pizzas">Pizzas</option>
+                <option value="fries">Fries</option>
+                <option value="drinks">Drinks</option>
+                <option value="sandwiches">Sandwiches</option>
+                <option value="desserts">Desserts</option>
+              </select>
+            </p>
+
+            <button type="submit">Save Product</button>
+          </form>
+        </fieldset>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Food Store. All rights reserved.</p>
+    </footer>
+  </body>
+  <script type="module" src="./admin.ts"></script>
+</html>

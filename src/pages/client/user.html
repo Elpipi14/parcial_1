@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./user.css" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>User Panel - Food Store</title>
+  </head>
+
+  <body>
+    <header id="main-header">
+      <h1><a href="/" class="logo-link">Food Store</a></h1>
+
+      <nav id="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+
+          <li id="user-menu-container">
+            <a href="/src/pages/client/user.html" id="user-link">
+              <i class="fa-solid fa-user"></i>
+            </a>
+
+            <div id="user-dropdown" class="user-dropdown hidden">
+              <a href="#" id="profile-link" class="dropdown-item">Profile</a>
+              <button id="logout-button" class="dropdown-item">Logout</button>
+            </div>
+          </li>
+
+          <li>
+            <a href="/src/pages/store/cart/cart.html" id="cart-link">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="user-panel">
+      <section class="panel-header">
+        <h2>My Profile</h2>
+        <p>Manage your personal information and review your orders.</p>
+      </section>
+
+      <section class="panel-grid">
+        <!-- PROFILE CARD -->
+        <article class="card profile-card">
+          <div class="card-title">
+            <i class="fa-solid fa-user"></i>
+            <h3>Profile Information</h3>
+          </div>
+
+          <div class="profile-info">
+            <p><strong>Email:</strong> <span id="profile-email"></span></p>
+            <p><strong>Role:</strong> <span id="profile-role"></span></p>
+          </div>
+
+          <div class="profile-actions">
+  <button id="profile-logout-btn" class="logout-btn">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    Logout
+  </button>
+</div>
+        </article>
+
+        <!-- ORDERS CARD -->
+        <article class="card orders-card">
+          <div class="card-title">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <h3>My Orders</h3>
+          </div>
+
+          <div id="orders-list" class="orders-list">
+            <p class="empty-message">You have no orders yet.</p>
+          </div>
+        </article>
+
+        <!-- EDIT CARD -->
+        <article class="card edit-card">
+          <div class="card-title">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <h3>Edit My Data</h3>
+          </div>
+
+          <form id="edit-user-form" class="edit-form">
+            <label for="new-email">New Email</label>
+            <input
+              type="email"
+              id="new-email"
+              name="new-email"
+              placeholder="Enter your new email"
+            />
+
+            <label for="new-password">New Password</label>
+            <input
+              type="password"
+              id="new-password"
+              name="new-password"
+              placeholder="Enter your new password"
+            />
+
+            <button type="submit">Save Changes</button>
+          </form>
+        </article>
+      
+      </section>
+    </main>
+
+    <script type="module" src="/src/pages/client/user.ts"></script>
+  </body>
+</html>

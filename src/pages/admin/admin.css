@@ -1,0 +1,174 @@
+.admin-page {
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* MAIN */
+.admin-page main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 40px;
+}
+
+/* TITULOS */
+.admin-page section h1 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.admin-page section h2 {
+    margin-bottom: 20px;
+}
+
+.admin-page main section:first-child {
+    width: 100%;
+}
+
+/* TABLE */
+.admin-page table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.admin-page thead {
+    background: #f9fafb;
+}
+
+.admin-page th,
+.admin-page td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: middle;
+}
+
+.admin-page th {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--color-light);
+}
+
+.admin-page td {
+    font-size: 14px;
+}
+
+.admin-page td img {
+    border-radius: 6px;
+    display: block;
+}
+
+/* ACTION LINKS */
+.admin-page td a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.admin-page td a:hover {
+    text-decoration: underline;
+}
+
+/* FORM SECTION */
+.admin-page .admin-form-section {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.admin-page fieldset {
+    border: none;
+    padding: 0;
+}
+
+.admin-page legend {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* FORM */
+.admin-page form {
+    background: var(--color-white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    max-width: 400px;
+}
+
+.admin-page form p {
+    margin-bottom: 15px;
+}
+
+.admin-page form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 6px;
+}
+
+/* INPUTS */
+.admin-page form input,
+.admin-page form select,
+.admin-page form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 14px;
+    margin-top: 5px;
+    background: var(--color-white);
+}
+
+.admin-page form textarea {
+    min-height: 80px;
+    resize: none;
+}
+
+/* FOCUS */
+.admin-page form input:focus,
+.admin-page form select:focus,
+.admin-page form textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+/* BUTTON */
+.admin-page form button {
+    margin-top: 10px;
+    padding: 12px;
+    width: 100%;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.admin-page form button:hover {
+    background: var(--color-primary-dark);
+}
+
+.logout-btn {
+    padding: 12px;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.admin-page footer {
+    padding: 20px 40px;
+    color: var(--color-light);
+    font-size: 14px;
+}

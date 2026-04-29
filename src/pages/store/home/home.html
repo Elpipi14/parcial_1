@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../style.css" />
+    <!-- ICONOS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <title>Food Store</title>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header id="main-header">
+      <h1><a href="/" class="logo-link">Food Store</a></h1>
+
+      <nav id="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+
+          <li id="admin-nav-item" class="hidden">
+            <a href="/src/pages/admin/admin.html">Panel Admin</a>
+          </li>
+
+          <li id="user-menu-container">
+            <a href="/src/pages/auth/login/login.html" id="user-link">
+              <i class="fa-solid fa-user"></i>
+            </a>
+
+            <div id="user-dropdown" class="user-dropdown hidden">
+              <a href="#" id="profile-link" class="dropdown-item">Profile</a>
+              <button id="logout-button" class="dropdown-item">Logout</button>
+            </div>
+          </li>
+
+          <li>
+            <a href="/src/pages/store/cart/cart.html" id="cart-link">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- CATEGORIES -->
+    <aside>
+      <h2>Categories</h2>
+      <ul id="container-categories"></ul>
+    </aside>
+
+    <!-- MAIN -->
+    <main>
+      <!-- SEARCH -->
+      <section>
+        <form id="search-form">
+          <label for="search">Search for food:</label>
+          <input
+            type="text"
+            id="search"
+            name="search"
+            placeholder="Hamburger"
+          />
+          <button type="submit">Search</button>
+        </form>
+      </section>
+
+      <!-- PRODUCTS -->
+      <section>
+        <h2>Products</h2>
+        <article id="container-products"></article>
+      </section>
+    </main>
+
+    <!-- ORDERS -->
+    <section id="orders-section">
+      <h1>My Orders</h1>
+      <div id="orders-container"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="main-footer">
+      <p>&copy; 2026 Food Store. All rights reserved.</p>
+    </footer>
+
+    <!-- SCRIPT PRINCIPAL -->
+    <script type="module" src="../../../main.ts"></script>
+  </body>
+</html>
