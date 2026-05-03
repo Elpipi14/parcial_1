@@ -155,6 +155,8 @@ Puede registrarse seleccionando rol **client**.
 ## Video de Presentación
 
 El link al video explicativo se encuentra adjunto en el archivo `.txt` solicitado por la consigna.
+LINK DEL VIDEO
+https://www.youtube.com/watch?v=RtHwgUYaOtw
 
 ---
 
